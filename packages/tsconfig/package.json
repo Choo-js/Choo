@@ -6,6 +6,7 @@
     "author": "Choo.js Authors",
     "license": "MIT",
     "type": "module",
+    "private": false,
     "scripts": {
         "build": "true",
         "watch": "true"

@@ -12,6 +12,7 @@
     "author": "Choo.js Authors",
     "license": "MIT",
     "type": "module",
+    "private": false,
     "dependencies": {
         "@choo-js/logger": "workspace:^0.1.0",
         "@choo-js/ticketing": "workspace:^0.1.0",

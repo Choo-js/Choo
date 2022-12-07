@@ -4,6 +4,7 @@
     "description": "The Choo.js common library.",
     "main": "dist/index.js",
     "typescript": "src/index.ts",
+    "private": false,
     "scripts": {
         "build": "tsc",
         "watch": "tsc --watch"

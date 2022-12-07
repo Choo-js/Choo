@@ -3,6 +3,7 @@
     "version": "0.1.0",
     "description": "The Choo.js CLI.",
     "main": "dist/index.js",
+    "private": false,
     "scripts": {
         "build": "tsc",
         "watch": "tsc --watch",
