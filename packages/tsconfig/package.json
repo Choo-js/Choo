@@ -1,6 +1,6 @@
 {
     "name": "@choo-js/tsconfig",
-    "version": "0.2.0",
+    "version": "0.2.2",
     "description": "The default Choo.js TypeScript config.",
     "keywords": [],
     "author": "Choo.js Authors",

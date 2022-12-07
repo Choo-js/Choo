@@ -1,6 +1,6 @@
 {
     "name": "@choo-js/throttle",
-    "version": "0.2.0",
+    "version": "0.2.2",
     "description": "The Choo.js configuration system.",
     "main": "dist/index.js",
     "private": false,

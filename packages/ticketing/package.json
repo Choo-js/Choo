@@ -1,6 +1,6 @@
 {
     "name": "@choo-js/ticketing",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "The Choo.js authentication system.",
     "main": "dist/index.js",
     "private": false,
@@ -13,8 +13,8 @@
     "license": "MIT",
     "type": "module",
     "dependencies": {
-        "@choo-js/coal": "^0.2.1",
-        "@choo-js/core": "^0.2.1",
+        "@choo-js/coal": "^0.2.2",
+        "@choo-js/core": "^0.2.2",
         "aws-sdk": "^2.1269.0",
         "fastify": "^4.10.2",
         "fastify-plugin": "^4.4.0",

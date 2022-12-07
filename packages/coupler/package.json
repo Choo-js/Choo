@@ -1,6 +1,6 @@
 {
     "name": "@choo-js/coupler",
-    "version": "0.2.0",
+    "version": "0.2.2",
     "description": "The Choo.js common library.",
     "main": "dist/index.js",
     "typescript": "src/index.ts",

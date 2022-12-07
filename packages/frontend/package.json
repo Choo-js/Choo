@@ -1,6 +1,6 @@
 {
     "name": "@choo-js/frontend",
-    "version": "0.2.0",
+    "version": "0.2.2",
     "description": "The Choo.js frontend system.",
     "main": "dist/index.js",
     "private": false,
