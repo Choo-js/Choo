@@ -1,6 +1,6 @@
 {
     "name": "@choo-js/choo",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "description": "A multilingual full-stack web application toolkit, inspired by Ruby on Rails.",
     "main": "./dist/index.cjs",
     "module": "./dist/index.mjs",
@@ -33,9 +33,9 @@
         "typescript": "4.9.3"
     },
     "dependencies": {
-        "@choo-js/coal": "^0.2.2",
-        "@choo-js/core": "^0.2.2",
-        "@choo-js/ticketing": "^0.2.2",
+        "@choo-js/coal": "^0.3.0",
+        "@choo-js/core": "^0.3.0",
+        "@choo-js/ticketing": "^0.3.0",
         "fastify": "^4.10.2",
         "reflect-metadata": "^0.1.13",
         "source-map-support": "^0.5.21",

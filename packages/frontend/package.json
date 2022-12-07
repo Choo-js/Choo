@@ -1,6 +1,6 @@
 {
     "name": "@choo-js/frontend",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "description": "The Choo.js frontend system.",
     "main": "dist/index.js",
     "private": false,
@@ -13,9 +13,9 @@
     "license": "MIT",
     "type": "module",
     "dependencies": {
-        "@choo-js/bundler": "*",
-        "@choo-js/logger": "*",
-        "@choo-js/coal": "*",
+        "@choo-js/bundler": "^0.3.0",
+        "@choo-js/coal": "^0.3.0",
+        "@choo-js/logger": "^0.3.0",
         "fastify": "^4.10.2"
     }
 }

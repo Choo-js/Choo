@@ -1,6 +1,6 @@
 {
     "name": "@choo-js/templates",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "description": "The Choo.js generator templates.",
     "main": "dist/index.js",
     "private": false,

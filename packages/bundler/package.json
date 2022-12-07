@@ -1,6 +1,6 @@
 {
     "name": "@choo-js/bundler",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "description": "The Choo.js bundler system.",
     "main": "dist/index.js",
     "private": false,
@@ -13,7 +13,7 @@
     "license": "MIT",
     "type": "module",
     "dependencies": {
-        "@choo-js/coal": "*",
+        "@choo-js/coal": "^0.3.0",
         "esbuild": "^0.16.1",
         "fastify": "^4.10.2",
         "mime-types": "^2.1.35",
