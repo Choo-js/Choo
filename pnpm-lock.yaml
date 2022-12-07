@@ -4,9 +4,9 @@ importers:
 
   .:
     specifiers:
-      '@choo-js/coal': '*'
-      '@choo-js/core': '*'
-      '@choo-js/ticketing': '*'
+      '@choo-js/coal': ^0.2.0
+      '@choo-js/core': ^0.2.0
+      '@choo-js/ticketing': ^0.2.0
       '@parcel/config-default': ^2.8.0
       '@parcel/core': ^2.8.0
       '@types/node': ^18.11.11
@@ -17,6 +17,7 @@ importers:
       fastify: ^4.10.2
       lerna: ^6.1.0
       nodemon: ^2.0.20
+      nx: ^15.3.0
       prettier: ^2.8.0
       reflect-metadata: ^0.1.13
       source-map-support: ^0.5.21
@@ -41,6 +42,7 @@ importers:
       eslint: 8.29.0
       lerna: 6.1.0
       nodemon: 2.0.20
+      nx: 15.3.0
       prettier: 2.8.0
       ts-node: 10.9.1_zhirybrk4zoofuxp64necizyzy
       typescript: 4.9.3
@@ -73,8 +75,7 @@ importers:
 
   packages/coal:
     specifiers:
-      '@choo-js/logger': '*'
-      '@choo-js/ticketing': '*'
+      '@choo-js/logger': ^0.2.0
       '@fastify/middie': ^8.1.0
       '@types/source-map-support': ^0.5.6
       fastify: ^4.10.2
@@ -82,7 +83,6 @@ importers:
       source-map-support: ^0.5.21
     dependencies:
       '@choo-js/logger': link:../logger
-      '@choo-js/ticketing': link:../ticketing
       '@fastify/middie': 8.1.0
       fastify: 4.10.2
       reflect-metadata: 0.1.13
