@@ -1,6 +1,6 @@
 {
     "name": "@choo-js/coal",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "The Choo.js http server system.",
     "main": "dist/index.js",
     "scripts": {
