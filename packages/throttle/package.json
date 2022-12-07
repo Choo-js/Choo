@@ -1,5 +1,5 @@
 {
-    "name": "@choo-js/config",
+    "name": "@choo-js/throttle",
     "version": "0.1.0",
     "description": "The Choo.js configuration system.",
     "main": "dist/index.js",
@@ -10,5 +10,10 @@
     "keywords": [],
     "author": "Choo.js Authors",
     "license": "MIT",
-    "type": "module"
+    "type": "module",
+    "dependencies": {
+        "@iarna/toml": "^2.2.5",
+        "reflect-metadata": "^0.1.13",
+        "yaml": "^2.1.3"
+    }
 }

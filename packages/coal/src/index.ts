@@ -14,7 +14,7 @@ import {
     MiddlewareEvent,
     ControllerImpl,
 } from "./decorators/index.js";
-import middie from "@fastify/middie";
+import middie from "@fastify/middie/types/index.js";
 import { Logger } from "@choo-js/logger/src";
 import { registerLoggerMiddleware } from "./middleware/logger.js";
 
@@ -36,7 +36,7 @@ export class CoalInstance {
 
     public static async new() {
         const instance = new CoalInstance();
-        
+
         await instance.setup();
 
         return instance;

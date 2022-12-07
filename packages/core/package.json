@@ -5,8 +5,7 @@
     "main": "dist/index.js",
     "scripts": {
         "build": "tsc",
-        "watch": "tsc --watch",
-        "start": "RUN_TEST=yes ts-node src/index.ts"
+        "watch": "tsc --watch"
     },
     "keywords": [],
     "author": "Choo.js Authors",
@@ -15,11 +14,10 @@
     "dependencies": {
         "@choo-js/bundler": "workspace:^0.1.0",
         "@choo-js/coal": "workspace:^0.1.0",
-        "@choo-js/common": "workspace:^0.1.0",
-        "@choo-js/config": "workspace:^0.1.0",
+        "@choo-js/coupler": "workspace:^0.1.0",
+        "@choo-js/throttle": "workspace:^0.1.0",
         "@choo-js/frontend": "workspace:^0.1.0",
         "@choo-js/logger": "workspace:^0.1.0",
-        "@choo-js/ticketing": "workspace:^0.1.0",
         "fastify": "^4.10.2"
     }
 }

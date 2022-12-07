@@ -1,5 +1,5 @@
 {
-    "name": "@choo-js/common",
+    "name": "@choo-js/coupler",
     "version": "0.1.0",
     "description": "The Choo.js common library.",
     "main": "dist/index.js",

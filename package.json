@@ -1,21 +1,27 @@
 {
-    "name": "@choo-js/workspace",
+    "name": "@choo-js/choo",
     "version": "0.1.0",
     "description": "A multilingual full-stack web application toolkit, inspired by Ruby on Rails.",
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "source": "./src/index.ts",
     "scripts": {
         "lint": "eslint --ext js,ts,jsx,tsx .",
-        "fmt": "prettier --write ."
+        "fmt": "prettier --write .",
+        "start": "ts-node src/index.ts"
     },
     "keywords": [],
     "type": "module",
     "author": "Choo.js Authors",
     "license": "MIT",
     "devDependencies": {
+        "@parcel/config-default": "^2.8.0",
+        "@parcel/core": "^2.8.0",
         "@types/node": "^18.11.11",
         "@types/source-map-support": "^0.5.6",
         "@typescript-eslint/eslint-plugin": "^5.45.1",
         "@typescript-eslint/parser": "^5.45.1",
-        "esbuild": "^0.15.18",
         "eslint": "^8.29.0",
         "nodemon": "^2.0.20",
         "prettier": "^2.8.0",

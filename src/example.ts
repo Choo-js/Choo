@@ -5,7 +5,7 @@ import {
     Get,
     Reply,
     Request,
-} from "@choo-js/coal/src";
+} from "../packages/coal/src/index.js";
 
 @Controller()
 export class ExampleController implements ControllerImpl {

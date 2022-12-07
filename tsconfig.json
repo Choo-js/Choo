@@ -22,6 +22,7 @@
         "sourceMap": true,
         "outDir": "dist",
         "strictPropertyInitialization": false,
+        "skipDefaultLibCheck": true,
 
         "module": "NodeNext",
         "target": "ESNext",
@@ -62,11 +63,24 @@
         "*/tests",
         "scripts",
         "src",
-        "tests"
+        "tests",
+        "rollup.config.js"
+    ],
+
+    "exclude": [
+        "**/**/node_modules",
+        "**/*/node_modules",
+        "**/node_modules",
+        "*/node_modules",
+        "node_modules"
     ],
 
     "ts-node": {
         "esm": true,
         "experimentalSpecifierResolution": "node"
+    },
+
+    "buildOptions": {
+        "incremental": true
     }
 }
