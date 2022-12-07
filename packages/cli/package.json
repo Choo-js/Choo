@@ -1,6 +1,6 @@
 {
     "name": "@choo-js/cli",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "The Choo.js CLI.",
     "main": "dist/index.js",
     "private": false,
@@ -14,8 +14,8 @@
     "author": "Choo.js Authors",
     "license": "MIT",
     "dependencies": {
-        "@choo-js/coupler": "*",
-        "@choo-js/logger": "*",
+        "@choo-js/coupler": "^0.2.0",
+        "@choo-js/logger": "^0.2.0",
         "chalk": "^5.1.2",
         "commander": "^9.4.1",
         "inquirer": "^9.1.4",

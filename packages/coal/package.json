@@ -1,6 +1,6 @@
 {
     "name": "@choo-js/coal",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "The Choo.js http server system.",
     "main": "dist/index.js",
     "scripts": {
@@ -14,8 +14,8 @@
     "type": "module",
     "private": false,
     "dependencies": {
-        "@choo-js/logger": "*",
-        "@choo-js/ticketing": "*",
+        "@choo-js/logger": "^0.2.0",
+        "@choo-js/ticketing": "^0.2.0",
         "@fastify/middie": "^8.1.0",
         "fastify": "^4.10.2",
         "reflect-metadata": "^0.1.13",
