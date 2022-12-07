@@ -4,9 +4,9 @@ importers:
 
   .:
     specifiers:
-      '@choo-js/coal': ^0.2.2
-      '@choo-js/core': ^0.2.2
-      '@choo-js/ticketing': ^0.2.2
+      '@choo-js/coal': ^0.3.0
+      '@choo-js/core': ^0.3.0
+      '@choo-js/ticketing': ^0.3.0
       '@parcel/config-default': ^2.8.0
       '@parcel/core': ^2.8.0
       '@types/node': ^18.11.11
@@ -49,7 +49,7 @@ importers:
 
   packages/bundler:
     specifiers:
-      '@choo-js/coal': '*'
+      '@choo-js/coal': ^0.3.0
       '@types/mime-types': ^2.1.1
       esbuild: ^0.16.1
       fastify: ^4.10.2
@@ -66,8 +66,8 @@ importers:
 
   packages/cli:
     specifiers:
-      '@choo-js/coupler': ^0.2.2
-      '@choo-js/logger': ^0.2.2
+      '@choo-js/coupler': ^0.3.0
+      '@choo-js/logger': ^0.3.0
       '@types/inquirer': ^9.0.3
       '@types/tmp': ^0.2.3
       chalk: ^5.1.2
@@ -89,7 +89,7 @@ importers:
 
   packages/coal:
     specifiers:
-      '@choo-js/logger': ^0.2.2
+      '@choo-js/logger': ^0.3.0
       '@fastify/middie': ^8.1.0
       '@types/source-map-support': ^0.5.6
       fastify: ^4.10.2
@@ -106,12 +106,12 @@ importers:
 
   packages/core:
     specifiers:
-      '@choo-js/bundler': ^0.2.2
-      '@choo-js/coal': ^0.2.2
-      '@choo-js/coupler': ^0.2.2
-      '@choo-js/frontend': ^0.2.2
-      '@choo-js/logger': ^0.2.2
-      '@choo-js/throttle': ^0.2.2
+      '@choo-js/bundler': ^0.3.0
+      '@choo-js/coal': ^0.3.0
+      '@choo-js/coupler': ^0.3.0
+      '@choo-js/frontend': ^0.3.0
+      '@choo-js/logger': ^0.3.0
+      '@choo-js/throttle': ^0.3.0
       fastify: ^4.10.2
     dependencies:
       '@choo-js/bundler': link:../bundler
@@ -127,9 +127,9 @@ importers:
 
   packages/frontend:
     specifiers:
-      '@choo-js/bundler': '*'
-      '@choo-js/coal': '*'
-      '@choo-js/logger': '*'
+      '@choo-js/bundler': ^0.3.0
+      '@choo-js/coal': ^0.3.0
+      '@choo-js/logger': ^0.3.0
       fastify: ^4.10.2
     dependencies:
       '@choo-js/bundler': link:../bundler
@@ -158,8 +158,8 @@ importers:
 
   packages/ticketing:
     specifiers:
-      '@choo-js/coal': ^0.2.2
-      '@choo-js/core': ^0.2.2
+      '@choo-js/coal': ^0.3.0
+      '@choo-js/core': ^0.3.0
       aws-sdk: ^2.1269.0
       fastify: ^4.10.2
       fastify-plugin: ^4.4.0
