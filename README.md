@@ -17,7 +17,7 @@ even just using plain templates.
 - [x] 100% written in TypeScript.
 - [x] A blazingly fast server framework based on Fastify. (See [@choo-js/coal](packages/coal/))
 - [x] Database support with TypeORM.
-- [x] Request logging. (See [@choo-js/logger](packages/logger/))
+- [x] Request logging. (See [@choo-js/logger](packages/logger/) and [logger.ts](packages/coal/src/middleware/logger.ts))
 - [x] Route parameter support.
 - [x] Query parsing.
 - [x] Body parsing.
