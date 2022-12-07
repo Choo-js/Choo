@@ -11,5 +11,15 @@
     "keywords": [],
     "author": "Choo.js Authors",
     "license": "MIT",
-    "type": "module"
+    "type": "module",
+    "dependencies": {
+        "@choo-js/coal": "*",
+        "esbuild": "^0.16.1",
+        "fastify": "^4.10.2",
+        "mime-types": "^2.1.35",
+        "node-html-parser": "^6.1.4"
+    },
+    "devDependencies": {
+        "@types/mime-types": "^2.1.1"
+    }
 }

@@ -11,5 +11,11 @@
     "keywords": [],
     "author": "Choo.js Authors",
     "license": "MIT",
-    "type": "module"
+    "type": "module",
+    "dependencies": {
+        "@choo-js/bundler": "*",
+        "@choo-js/logger": "*",
+        "@choo-js/coal": "*",
+        "fastify": "^4.10.2"
+    }
 }
