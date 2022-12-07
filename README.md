@@ -15,17 +15,24 @@ even just using plain templates.
 ## Features
 
 - [x] 100% written in TypeScript.
-- [ ] A custom ERB-like templating language.
+- [x] A blazingly fast server framework based on Fastify. (See [@choo-js/coal](packages/coal/))
+- [x] Database support with TypeORM.
+- [x] Request logging. (See [@choo-js/logger](packages/logger/))
+- [x] Route parameter support.
+- [x] Query parsing.
+- [x] Body parsing.
+- [x] Full controller support for requests and middleware.
+- [ ] An easy CLI to manage your app. (See [@choo-js/cli](packages/cli/))
+- [ ] A custom ERB-like templating language. (See [@choo-js/templates](packages/templates/))
 - [ ] Static asset handling.
-- [ ] Asset bundling.
+- [ ] Asset bundling. (See [@choo-js/bundler](packages/bundler/))
 - [ ] Production build optimization and minification.
 - [ ] Standalone production build binary generator.
-- [ ] Secure authentication API (OAuth2 or custom).
-- [ ] REST API creation support.
+- [x] Secure authentication API. (See [@choo-js/ticketing](packages/ticketing/))
+- [x] REST API creation support.
 - [ ] Support for TypeScript-based backends.
 - [ ] Frontend builds with ESBuild and a custom build API.
-- [ ] Support for frontends with Svelte, React, Preact, and Vue.
-- [ ] Support for EJS, Handlebars, and other templating languages.
+- [ ] Support for frontends with Svelte, React, Preact, Vue, and templating languages. (See [@choo-js/frontend](packages/frontend/))
 - [ ] Support for Rust-based backends (native node modules).
 - [ ] Support for Go-based backends (native node modules).
 
@@ -45,6 +52,10 @@ The directory structure of any Choo.js project is as follows:
 - scripts/ => Utility scripts you can run during development.
 - static/ => Static assets for your app to use.
 - views/ => Views to render in your app.
+
+## Showcase
+
+![Feature Showcase](./media/features.png)
 
 ## Contributing
 

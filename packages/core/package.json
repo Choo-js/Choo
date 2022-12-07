@@ -1,0 +1,25 @@
+{
+    "name": "@choo-js/core",
+    "version": "0.1.0",
+    "description": "A multilingual full-stack web application toolkit, inspired by Ruby on Rails.",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch",
+        "start": "RUN_TEST=yes ts-node src/index.ts"
+    },
+    "keywords": [],
+    "author": "Choo.js Authors",
+    "license": "MIT",
+    "type": "module",
+    "dependencies": {
+        "@choo-js/bundler": "workspace:^0.1.0",
+        "@choo-js/coal": "workspace:^0.1.0",
+        "@choo-js/common": "workspace:^0.1.0",
+        "@choo-js/config": "workspace:^0.1.0",
+        "@choo-js/frontend": "workspace:^0.1.0",
+        "@choo-js/logger": "workspace:^0.1.0",
+        "@choo-js/ticketing": "workspace:^0.1.0",
+        "fastify": "^4.10.2"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "name": "@choo-js/ticketing",
+    "version": "0.1.0",
+    "description": "The Choo.js authentication system.",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch"
+    },
+    "keywords": [],
+    "author": "Choo.js Authors",
+    "license": "MIT",
+    "type": "module",
+    "dependencies": {
+        "@choo-js/coal": "workspace:^0.1.0",
+        "@choo-js/core": "workspace:^0.1.0",
+        "fastify": "^4.10.2",
+        "fastify-plugin": "^4.4.0",
+        "mongodb": "^3.7.3",
+        "mssql": "^7.3.5",
+        "mysql2": "^2.3.3",
+        "pg": "^8.8.0",
+        "reflect-metadata": "^0.1.13",
+        "sqlite3": "^5.1.2",
+        "typeorm": "^0.3.11"
+    }
+}

@@ -20,53 +20,17 @@
         "skipLibCheck": true,
         "strict": true,
         "sourceMap": true,
-        "outDir": "dist",
-        "strictPropertyInitialization": false,
 
         "module": "NodeNext",
-        "target": "ESNext",
-
-        "lib": [
-            "DOM",
-            "DOM.Iterable",
-
-            "ESNext",
-            "ESNext.AsyncIterable",
-            "ESNext.BigInt",
-            "ESNext.Intl",
-            "ESNext.Promise",
-            "ESNext.String",
-            "ESNext.Symbol",
-            "ESNext.WeakRef",
-
-            "ScriptHost",
-
-            "WebWorker",
-            "WebWorker.ImportScripts",
-            "Webworker.Iterable"
-        ]
+        "target": "ESNext"
     },
 
     "include": [
         "**/**/scripts",
         "**/**/src",
-        "**/**/tests",
-        "**/*/scripts",
-        "**/*/src",
-        "**/*/tests",
         "**/scripts",
         "**/src",
-        "**/tests",
-        "*/scripts",
-        "*/src",
-        "*/tests",
         "scripts",
-        "src",
-        "tests"
-    ],
-
-    "ts-node": {
-        "esm": true,
-        "experimentalSpecifierResolution": "node"
-    }
+        "src"
+    ]
 }

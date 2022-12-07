@@ -1,0 +1,26 @@
+{
+    "name": "@choo-js/coal",
+    "version": "0.1.0",
+    "description": "The Choo.js http server system.",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch",
+        "start": "ts-node src/index.ts"
+    },
+    "keywords": [],
+    "author": "Choo.js Authors",
+    "license": "MIT",
+    "type": "module",
+    "dependencies": {
+        "@choo-js/logger": "workspace:^0.1.0",
+        "@choo-js/ticketing": "workspace:^0.1.0",
+        "@fastify/middie": "^8.1.0",
+        "fastify": "^4.10.2",
+        "reflect-metadata": "^0.1.13",
+        "source-map-support": "^0.5.21"
+    },
+    "devDependencies": {
+        "@types/source-map-support": "^0.5.6"
+    }
+}

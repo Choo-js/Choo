@@ -1,0 +1,14 @@
+{
+    "name": "@choo-js/bundler",
+    "version": "0.1.0",
+    "description": "The Choo.js bundler system.",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch"
+    },
+    "keywords": [],
+    "author": "Choo.js Authors",
+    "license": "MIT",
+    "type": "module"
+}
