@@ -1,4 +1,5 @@
-import { RequestParamIndexMetadataKey } from "./constants.js";
+import "reflect-metadata";
+import { RequestParamIndexMetadataKey } from "./constants";
 
 export const Request = (): ParameterDecorator => {
     return (target: Object, key: string | symbol, index: number) => {

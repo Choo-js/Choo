@@ -1,8 +1,5 @@
-import { CoalInstance, ControllerImpl } from "@choo-js/coal/src/index.js";
-import {
-    FastifyPluginCallback,
-    FastifyPluginOptions,
-} from "fastify/fastify.js";
+import { CoalInstance, ControllerImpl } from "@choo-js/coal";
+import { FastifyPluginCallback, FastifyPluginOptions } from "fastify";
 
 export type TrainCar<T> = (locomotive: Locomotive, options: T) => Promise<void>;
 

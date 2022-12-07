@@ -1,2 +1,2 @@
-export * from "./AbstractRepository.js";
-export * from "./hashing.js";
+export * from "./AbstractRepository";
+export * from "./hashing";

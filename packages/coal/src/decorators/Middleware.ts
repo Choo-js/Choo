@@ -1,10 +1,10 @@
 import "reflect-metadata";
-import { MethodTypeMetadataKey, MiddlewareTypeKey } from "./constants.js";
+import { MethodTypeMetadataKey, MiddlewareTypeKey } from "./constants";
 
 export type MiddlewareEvent = "onRequest" | "onResponse";
 
 export const Middleware = (event?: MiddlewareEvent): MethodDecorator => {
-    return (target: Object, key: string | symbol, __: PropertyDescriptor) => {
+    return (target: Object, key: string | symbol) => {
         Reflect.defineMetadata(
             MethodTypeMetadataKey,
             "middleware",

@@ -14,57 +14,24 @@
         "inlineSourceMap": false,
         "isolatedModules": false,
         "incremental": true,
-        "moduleResolution": "NodeNext",
+        "moduleResolution": "Node",
         "removeComments": true,
-        "resolveJsonModule": true,
         "skipLibCheck": true,
         "strict": true,
         "sourceMap": true,
         "outDir": "dist",
         "strictPropertyInitialization": false,
-        "skipDefaultLibCheck": true,
 
-        "module": "NodeNext",
+        "module": "ESNext",
         "target": "ESNext",
 
-        "lib": [
-            "DOM",
-            "DOM.Iterable",
-
-            "ESNext",
-            "ESNext.AsyncIterable",
-            "ESNext.BigInt",
-            "ESNext.Intl",
-            "ESNext.Promise",
-            "ESNext.String",
-            "ESNext.Symbol",
-            "ESNext.WeakRef",
-
-            "ScriptHost",
-
-            "WebWorker",
-            "WebWorker.ImportScripts",
-            "Webworker.Iterable"
-        ]
+        "lib": ["DOM", "DOM.Iterable", "ESNext"]
     },
 
     "include": [
-        "**/**/scripts",
-        "**/**/src",
-        "**/**/tests",
-        "**/*/scripts",
-        "**/*/src",
-        "**/*/tests",
-        "**/scripts",
-        "**/src",
-        "**/tests",
-        "*/scripts",
-        "*/src",
-        "*/tests",
         "scripts",
         "src",
-        "tests",
-        "rollup.config.js"
+        "tests"
     ],
 
     "exclude": [

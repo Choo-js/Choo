@@ -13,8 +13,8 @@
     "license": "MIT",
     "type": "module",
     "dependencies": {
-        "@choo-js/coal": "workspace:^0.1.0",
-        "@choo-js/core": "workspace:^0.1.0",
+        "@choo-js/coal": "*",
+        "@choo-js/core": "*",
         "aws-sdk": "^2.1269.0",
         "fastify": "^4.10.2",
         "fastify-plugin": "^4.4.0",

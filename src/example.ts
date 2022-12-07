@@ -1,11 +1,5 @@
 import { FastifyRequest, FastifyReply } from "fastify";
-import {
-    Controller,
-    ControllerImpl,
-    Get,
-    Reply,
-    Request,
-} from "../packages/coal/src/index.js";
+import { Controller, ControllerImpl, Get, Reply, Request } from "@choo-js/coal";
 
 @Controller()
 export class ExampleController implements ControllerImpl {

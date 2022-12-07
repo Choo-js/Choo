@@ -7,16 +7,16 @@ import {
     getAllRoutes,
     executeMiddleware,
     getAllMiddlewares,
-} from "./metadata/index.js";
+} from "./metadata";
 import {
     MiddlewareTypeKey,
     RoutePathMetadataKey,
     MiddlewareEvent,
     ControllerImpl,
-} from "./decorators/index.js";
-import middie from "@fastify/middie/types/index.js";
-import { Logger } from "@choo-js/logger/src";
-import { registerLoggerMiddleware } from "./middleware/logger.js";
+} from "./decorators";
+import middie from "@fastify/middie";
+import { Logger } from "@choo-js/logger";
+import { registerLoggerMiddleware } from "./middleware/logger";
 
 sourceMap.install();
 
@@ -92,4 +92,4 @@ export class CoalInstance {
     }
 }
 
-export * from "./exports.js";
+export * from "./exports";

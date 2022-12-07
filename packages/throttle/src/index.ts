@@ -1,3 +1,3 @@
-export * from "./object.js";
-export * from "./decorators/index.js";
-export * from "./metadata/index.js";
+export * from "./object";
+export * from "./decorators";
+export * from "./metadata";

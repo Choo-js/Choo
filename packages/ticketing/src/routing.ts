@@ -6,11 +6,11 @@ import {
     Put,
     ControllerImpl,
     Delete,
-} from "@choo-js/coal/src";
+} from "@choo-js/coal";
 import { FastifyReply, FastifyRequest } from "fastify";
-import { hashPassword } from "./util/index.js";
-import { UserManager } from "./repositories/index.js";
-import { User } from "./models/index.js";
+import { hashPassword } from "./util";
+import { UserManager } from "./repositories";
+import { User } from "./models";
 
 @Controller()
 export class TicketingController implements ControllerImpl {

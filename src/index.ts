@@ -1,6 +1,6 @@
-import { Locomotive } from "../packages/core/src/index.js";
-import { ticketing } from "../packages/ticketing/src/index.js";
-import { ExampleController } from "./example.js";
+import { Locomotive } from "@choo-js/core";
+import { ticketing } from "@choo-js/ticketing";
+import { ExampleController } from "./example";
 
 const run = async () => {
     console.log("Starting app...");

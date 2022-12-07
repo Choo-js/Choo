@@ -2,14 +2,13 @@ import "reflect-metadata";
 
 import fs from "fs";
 import path from "path";
-import { ConfigSource } from "./decorators/Configuration.js";
 import {
+    ConfigSource,
     ConfigSourceOrderMetadataKey,
     PropertyDefaultMetadataKey,
     PropertyRequiredMetadataKey,
-} from "./decorators/constants.js";
-import { ExampleConfig } from "./decorators/example.js";
-import { getAllMetadata } from "./metadata/metadata.js";
+} from "./decorators";
+import { getAllMetadata } from "./metadata";
 import TOML from "@iarna/toml";
 import yaml from "yaml";
 

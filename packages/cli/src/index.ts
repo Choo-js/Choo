@@ -1,5 +1,5 @@
 import { program } from "commander";
-import { InitCommand } from "./commands/init.js";
+import { InitCommand } from "./commands/init";
 
 program.name("choo");
 program.description("The Choo.js CLI tool.");

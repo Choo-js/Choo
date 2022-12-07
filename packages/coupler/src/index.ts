@@ -1,1 +1,1 @@
-export * from "./NicePromise.js";
+export * from "./NicePromise";

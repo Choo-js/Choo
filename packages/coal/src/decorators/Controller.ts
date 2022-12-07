@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import { ClassTypeMetadataKey } from "./constants.js";
+import { ClassTypeMetadataKey } from "./constants";
 
 export const Controller = (): ClassDecorator => {
     return (target: Function) => {

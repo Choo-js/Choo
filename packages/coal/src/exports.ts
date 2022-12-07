@@ -1,4 +1,4 @@
-export * from "./metadata/index.js";
-export * from "./decorators/index.js";
+export * from "./metadata";
+export * from "./decorators";
 
-export * from "./middleware/logger.js";
+export * from "./middleware/logger";

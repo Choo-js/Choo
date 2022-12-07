@@ -1,3 +1,3 @@
-export * from "./middlewares.js";
-export * from "./routes.js";
-export * from "./metadata.js";
+export * from "./middlewares";
+export * from "./routes";
+export * from "./metadata";

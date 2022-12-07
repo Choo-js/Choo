@@ -14,8 +14,8 @@
     "author": "Choo.js Authors",
     "license": "MIT",
     "dependencies": {
-        "@choo-js/coupler": "workspace:^0.1.0",
-        "@choo-js/logger": "workspace:^0.1.0",
+        "@choo-js/coupler": "*",
+        "@choo-js/logger": "*",
         "chalk": "^5.1.2",
         "commander": "^9.4.1",
         "inquirer": "^9.1.4",

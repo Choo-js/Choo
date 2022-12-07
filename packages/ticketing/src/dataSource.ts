@@ -1,5 +1,5 @@
 import { DataSource } from "typeorm";
-import { User } from "./models/User.js";
+import { User } from "./models";
 
 export type DataSourceType =
     | "mysql"

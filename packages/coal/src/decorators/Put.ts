@@ -1,8 +1,8 @@
 import "reflect-metadata";
-import { RoutePathMetadataKey, MethodTypeMetadataKey } from "./constants.js";
+import { RoutePathMetadataKey, MethodTypeMetadataKey } from "./constants";
 
 export const Put = (path: string): MethodDecorator => {
-    return (target: Object, key: string | symbol, __: PropertyDescriptor) => {
+    return (target: Object, key: string | symbol) => {
         const existing =
             Reflect.getMetadata(RoutePathMetadataKey, target, key) || {};
         existing.put = path;

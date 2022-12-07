@@ -1,5 +1,5 @@
-import { Configuration } from "./Configuration.js";
-import { Property } from "./Property.js";
+import { Configuration } from "./Configuration";
+import { Property } from "./Property";
 
 @Configuration(["file", "env"])
 export class ExampleConfig {

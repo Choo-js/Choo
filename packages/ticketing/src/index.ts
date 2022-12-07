@@ -2,14 +2,14 @@ import sourceMap from "source-map-support";
 sourceMap.install();
 
 import "reflect-metadata";
-import FastifyTypeORM from "./plugin.js";
-import { buildDataSource, DataSourceType } from "./dataSource.js";
-import { Locomotive } from "@choo-js/core/src/index.js";
-import { TicketingController } from "./routing.js";
+import FastifyTypeORM from "./plugin";
+import { buildDataSource, DataSourceType } from "./dataSource";
+import { Locomotive } from "@choo-js/core";
+import { TicketingController } from "./routing";
 
-export * from "./models/index.js";
-export * from "./repositories/index.js";
-export * from "./util/index.js";
+export * from "./models";
+export * from "./repositories";
+export * from "./util";
 
 export interface TicketingOptions {
     type: DataSourceType;

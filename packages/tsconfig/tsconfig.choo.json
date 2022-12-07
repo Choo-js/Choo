@@ -14,15 +14,19 @@
         "inlineSourceMap": false,
         "isolatedModules": false,
         "incremental": true,
-        "moduleResolution": "NodeNext",
+        "moduleResolution": "Node",
         "removeComments": true,
         "resolveJsonModule": true,
         "skipLibCheck": true,
         "strict": true,
         "sourceMap": true,
+        "outDir": "dist",
+        "strictPropertyInitialization": false,
 
-        "module": "NodeNext",
-        "target": "ESNext"
+        "module": "ESNext",
+        "target": "ESNext",
+
+        "lib": ["DOM", "DOM.Iterable", "ESNext"]
     },
 
     "include": [

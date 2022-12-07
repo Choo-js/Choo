@@ -1,8 +1,8 @@
 import "reflect-metadata";
-import { MethodTypeMetadataKey, RoutePathMetadataKey } from "./constants.js";
+import { MethodTypeMetadataKey, RoutePathMetadataKey } from "./constants";
 
 export const Delete = (path: string): MethodDecorator => {
-    return (target: Object, key: string | symbol, __: PropertyDescriptor) => {
+    return (target: Object, key: string | symbol) => {
         const existing =
             Reflect.getMetadata(RoutePathMetadataKey, target, key) || {};
         existing.delete = path;

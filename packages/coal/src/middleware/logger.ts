@@ -1,5 +1,5 @@
 import { FastifyInstance } from "fastify";
-import { Logger } from "@choo-js/logger/src";
+import { Logger } from "@choo-js/logger";
 
 export const registerLoggerMiddleware = (fastify: FastifyInstance) => {
     fastify.addHook("onResponse", (req, res) => {

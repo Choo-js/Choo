@@ -3,8 +3,8 @@ import {
     MethodTypeMetadataKey,
     ReplyParamIndexMetadataKey,
     RequestParamIndexMetadataKey,
-} from "../decorators/constants.js";
-import { getAllMetadata } from "./index.js";
+} from "../decorators/constants";
+import { getAllMetadata } from "./index";
 
 export const getAllRoutes = (obj: Object) => {
     const keys = Reflect.ownKeys(Reflect.getPrototypeOf(obj)!);

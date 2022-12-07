@@ -2,7 +2,7 @@ import "reflect-metadata";
 import {
     PropertyDefaultMetadataKey,
     PropertyRequiredMetadataKey,
-} from "./constants.js";
+} from "./constants";
 
 export const Property = <T>(
     required = false,

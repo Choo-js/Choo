@@ -13,12 +13,12 @@
     "type": "module",
     "private": false,
     "dependencies": {
-        "@choo-js/bundler": "workspace:^0.1.0",
-        "@choo-js/coal": "workspace:^0.1.0",
-        "@choo-js/coupler": "workspace:^0.1.0",
-        "@choo-js/throttle": "workspace:^0.1.0",
-        "@choo-js/frontend": "workspace:^0.1.0",
-        "@choo-js/logger": "workspace:^0.1.0",
+        "@choo-js/bundler": "*",
+        "@choo-js/coal": "*",
+        "@choo-js/coupler": "*",
+        "@choo-js/throttle": "*",
+        "@choo-js/frontend": "*",
+        "@choo-js/logger": "*",
         "fastify": "^4.10.2"
     }
 }

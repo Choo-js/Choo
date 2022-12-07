@@ -1,5 +1,5 @@
 import "reflect-metadata";
-import { ConfigSourceOrderMetadataKey } from "./constants.js";
+import { ConfigSourceOrderMetadataKey } from "./constants";
 
 export type ConfigSource = "file" | "env";
 
