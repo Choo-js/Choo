@@ -10,10 +10,6 @@ export const compileScript = async (script: string, basePath: string) => {
         bundle: false,
         platform: "browser",
 
-        outfile: path.join(
-            basePath,
-            ".bundle",
-            newName
-        ),
+        outfile: path.join(basePath, ".bundle", newName),
     });
 };

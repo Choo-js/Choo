@@ -1,16 +1,27 @@
 {
+    "$schema": "./node_modules/nx/schemas/nx-schema.json",
+    "npmScope": ".",
     "tasksRunnerOptions": {
         "default": {
             "runner": "nx/tasks-runners/default",
             "options": {
-                "cacheableOperations": ["build"]
+                "cacheableOperations": ["build", "lint", "test", "e2e"]
             }
         }
     },
     "targetDefaults": {
         "build": {
             "dependsOn": ["^build"],
-            "outputs": ["{projectRoot}/dist"]
+            "inputs": ["production", "^production"]
         }
+    },
+    "namedInputs": {
+        "default": ["{projectRoot}/**/*", "sharedGlobals"],
+        "production": ["default"],
+        "sharedGlobals": []
+    },
+    "workspaceLayout": {
+        "appsDir": "apps",
+        "libsDir": "packages"
     }
 }

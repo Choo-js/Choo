@@ -11,7 +11,10 @@ export interface AssetServeResult {
     content?: string;
 }
 
-export const serveAsset = async (assetPath: string, basePath: string): Promise<AssetServeResult> => {
+export const serveAsset = async (
+    assetPath: string,
+    basePath: string
+): Promise<AssetServeResult> => {
     if (assetPath.endsWith(".ts")) {
         const orig = path.join(basePath, "tests", assetPath);
         const ext = assetPath.split(".").pop()!;
@@ -63,16 +66,19 @@ export const serveAsset = async (assetPath: string, basePath: string): Promise<A
                     mime: mime.lookup(file),
                     path: file,
                 };
-
-            else return {
-                code: 400,
-                mime: mime.lookup(file),
-                path: file,
-            };
+            else
+                return {
+                    code: 400,
+                    mime: mime.lookup(file),
+                    path: file,
+                };
         }
     }
 };
 
-export const getAssetContents = async (assetPath: string, override?: string) => {
+export const getAssetContents = async (
+    assetPath: string,
+    override?: string
+) => {
     return override || fs.readFileSync(assetPath).toString();
 };

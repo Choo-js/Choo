@@ -2,7 +2,7 @@ import { FastifyRequest, FastifyReply } from "fastify";
 import { Controller, ControllerImpl, Get, Reply, Request } from "@choo-js/coal";
 
 @Controller()
-export class ExampleController implements ControllerImpl {
+export class ExampleController extends ControllerImpl {
     @Get("/hello/:name")
     public async hello(
         @Request() req: FastifyRequest,

@@ -1,1 +1,1 @@
-export interface ControllerImpl {}
+export class ControllerImpl {}

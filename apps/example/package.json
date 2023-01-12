@@ -1,0 +1,21 @@
+{
+    "name": "@choo-js/example-app",
+    "version": "0.3.0",
+    "description": "An example app built with Choo.js.",
+    "main": "dist/index.js",
+    "private": false,
+    "scripts": {
+        "build": "tsc",
+        "watch": "tsc --watch"
+    },
+    "keywords": [],
+    "author": "Choo.js Authors",
+    "license": "MIT",
+    "type": "module",
+    "dependencies": {
+        "@choo-js/coal": "*",
+        "@choo-js/core": "*",
+        "@choo-js/ticketing": "*",
+        "fastify": "^4.10.2"
+    }
+}

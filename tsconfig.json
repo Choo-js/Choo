@@ -1,8 +1,11 @@
 {
+    "compileOnSave": false,
+
     "compilerOptions": {
         "allowJs": true,
         "allowSyntheticDefaultImports": true,
         "alwaysStrict": true,
+        "baseUrl": ".",
         "checkJs": true,
         "declaration": true,
         "declarationMap": false,
@@ -16,7 +19,9 @@
         "incremental": true,
         "moduleResolution": "Node",
         "removeComments": true,
+        "rootDir": ".",
         "skipLibCheck": true,
+        "skipDefaultLibCheck": true,
         "strict": true,
         "sourceMap": true,
         "outDir": "dist",
@@ -25,13 +30,15 @@
         "module": "ESNext",
         "target": "ESNext",
 
-        "lib": ["DOM", "DOM.Iterable", "ESNext"]
+        "lib": ["DOM", "DOM.Iterable", "ESNext"],
+
+        "paths": {}
     },
 
     "include": [
-        "scripts",
-        "src",
-        "tests"
+        "**/scripts",
+        "**/src",
+        "**/tests"
     ],
 
     "exclude": [
@@ -39,7 +46,25 @@
         "**/*/node_modules",
         "**/node_modules",
         "*/node_modules",
-        "node_modules"
+        "node_modules",
+
+        "**/**/dist",
+        "**/*/dist",
+        "**/dist",
+        "*/dist",
+        "dist",
+
+        "**/**/build",
+        "**/*/build",
+        "**/build",
+        "*/build",
+        "build",
+
+        "**/**/tmp",
+        "**/*/tmp",
+        "**/tmp",
+        "*/tmp",
+        "tmp"
     ],
 
     "ts-node": {

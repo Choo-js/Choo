@@ -5,7 +5,10 @@ import { FastifyReply, FastifyRequest } from "fastify";
 @Controller()
 export class FrontendController {
     @Get("*")
-    public async all(@Request() req: FastifyRequest, @Reply() res: FastifyReply) {
+    public async all(
+        @Request() req: FastifyRequest,
+        @Reply() res: FastifyReply
+    ) {
         const ctrl = new DEV.Controller();
 
         await ctrl.serveAsset(req, res, process.cwd());
