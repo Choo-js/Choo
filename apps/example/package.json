@@ -5,8 +5,10 @@
     "main": "dist/index.js",
     "private": false,
     "scripts": {
+        "start": "ts-node src/index.ts",
         "build": "tsc",
-        "watch": "tsc --watch"
+        "watch": "tsc --watch",
+        "dev": "nodemon --watch ../../**/src --ext ts,js,json --exec ts-node src/index.ts"
     },
     "keywords": [],
     "author": "Choo.js Authors",
@@ -17,5 +19,8 @@
         "@choo-js/core": "*",
         "@choo-js/ticketing": "*",
         "fastify": "^4.10.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.20"
     }
 }

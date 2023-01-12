@@ -6,7 +6,7 @@
         "allowSyntheticDefaultImports": true,
         "alwaysStrict": true,
         "baseUrl": ".",
-        "checkJs": true,
+        "checkJs": false,
         "declaration": true,
         "declarationMap": false,
         "emitDecoratorMetadata": true,

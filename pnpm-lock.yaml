@@ -4,9 +4,6 @@ importers:
 
   .:
     specifiers:
-      '@choo-js/coal': ^0.3.0
-      '@choo-js/core': ^0.3.0
-      '@choo-js/ticketing': ^0.3.0
       '@nrwl/js': ^15.4.8
       '@nrwl/workspace': ^15.4.8
       '@parcel/config-default': ^2.8.0
@@ -15,8 +12,8 @@ importers:
       '@types/source-map-support': ^0.5.6
       '@typescript-eslint/eslint-plugin': ^5.45.1
       '@typescript-eslint/parser': ^5.45.1
+      concurrently: ^7.6.0
       eslint: ^8.29.0
-      fastify: ^4.10.2
       nodemon: ^2.0.20
       nx: 15.4.8
       prettier: ^2.8.0
@@ -26,10 +23,6 @@ importers:
       tslib: ^2.4.1
       typescript: 4.9.3
     dependencies:
-      '@choo-js/coal': link:packages/coal
-      '@choo-js/core': link:packages/core
-      '@choo-js/ticketing': link:packages/ticketing
-      fastify: 4.10.2
       reflect-metadata: 0.1.13
       source-map-support: 0.5.21
       tslib: 2.4.1
@@ -42,12 +35,28 @@ importers:
       '@types/source-map-support': 0.5.6
       '@typescript-eslint/eslint-plugin': 5.45.1_tdm6ms4ntwhlpozn7kjqrhum74
       '@typescript-eslint/parser': 5.45.1_s5ps7njkmjlaqajutnox5ntcla
+      concurrently: 7.6.0
       eslint: 8.29.0
       nodemon: 2.0.20
       nx: 15.4.8
       prettier: 2.8.0
       ts-node: 10.9.1_zhirybrk4zoofuxp64necizyzy
       typescript: 4.9.3
+
+  apps/example:
+    specifiers:
+      '@choo-js/coal': '*'
+      '@choo-js/core': '*'
+      '@choo-js/ticketing': '*'
+      fastify: ^4.10.2
+      nodemon: ^2.0.20
+    dependencies:
+      '@choo-js/coal': link:../../packages/coal
+      '@choo-js/core': link:../../packages/core
+      '@choo-js/ticketing': link:../../packages/ticketing
+      fastify: 4.10.2
+    devDependencies:
+      nodemon: 2.0.20
 
   packages/bundler:
     specifiers:
@@ -2597,6 +2606,22 @@ packages:
   /concat-map/0.0.1:
     resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
 
+  /concurrently/7.6.0:
+    resolution: {integrity: sha512-BKtRgvcJGeZ4XttiDiNcFiRlxoAeZOseqUvyYRUp/Vtd+9p1ULmeoSqGsDA+2ivdeDFpqrJvGvmI+StKfKl5hw==}
+    engines: {node: ^12.20.0 || ^14.13.0 || >=16.0.0}
+    hasBin: true
+    dependencies:
+      chalk: 4.1.2
+      date-fns: 2.29.3
+      lodash: 4.17.21
+      rxjs: 7.6.0
+      shell-quote: 1.7.4
+      spawn-command: 0.0.2-1
+      supports-color: 8.1.1
+      tree-kill: 1.2.2
+      yargs: 17.6.2
+    dev: true
+
   /console-control-strings/1.1.0:
     resolution: {integrity: sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==}
     dev: false
@@ -2681,7 +2706,6 @@ packages:
   /date-fns/2.29.3:
     resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
     engines: {node: '>=0.11'}
-    dev: false
 
   /date-utils/1.2.21:
     resolution: {integrity: sha512-wJMBjqlwXR0Iv0wUo/lFbhSQ7MmG1hl36iuxuE91kW+5b5sWbase73manEqNH9sOLFAMG83B4ffNKq9/Iq0FVA==}
@@ -4211,7 +4235,6 @@ packages:
 
   /lodash/4.17.21:
     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}
-    dev: false
 
   /log-symbols/5.1.0:
     resolution: {integrity: sha512-l0x2DvrW294C9uDCoQe1VSU4gf529FkSZ6leBl4TiqZH/e+0R7hSfHQBNut2mNygDgHwvYHfFLn6Oxb3VWj2rA==}
@@ -5507,6 +5530,10 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /shell-quote/1.7.4:
+    resolution: {integrity: sha512-8o/QEhSSRb1a5i7TFR0iM4G16Z0vYB2OQVs4G3aAFXjn3T6yEx8AZxy1PgDF7I00LZHYA3WxaSYIf5e5sAX8Rw==}
+    dev: true
+
   /side-channel/1.0.4:
     resolution: {integrity: sha512-q5XPytqFEIKHkGdiMIrY10mvLRvnQh42/+GoBlFW3b2LXLE2xxJpZFdm94we0BaoV3RwJyGqg5wS7epxTv0Zvw==}
     dependencies:
@@ -5610,6 +5637,10 @@ packages:
       memory-pager: 1.5.0
     dev: false
     optional: true
+
+  /spawn-command/0.0.2-1:
+    resolution: {integrity: sha512-n98l9E2RMSJ9ON1AKisHzz7V42VDiBQGY6PB1BwRglz99wpVsSuGzQ+jOi6lFXBGVTCrRpltvjm+/XA+tpeJrg==}
+    dev: true
 
   /split2/4.1.0:
     resolution: {integrity: sha512-VBiJxFkxiXRlUIeyMQi8s4hgvKCSjtknJv/LVYbrgALPwf5zSKmEwV9Lst25AkvMDnvxODugjdl6KZgwKM1WYQ==}
@@ -5748,6 +5779,13 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       has-flag: 4.0.0
+
+  /supports-color/8.1.1:
+    resolution: {integrity: sha512-MpUEN2OodtUzxvKQl72cUF7RQ5EiHsGvSsVG0ia9c5RbWGL2CI4C7EpPS8UTBIplnlzZiNuV56w+FuNxy3ty2Q==}
+    engines: {node: '>=10'}
+    dependencies:
+      has-flag: 4.0.0
+    dev: true
 
   /svgo/2.8.0:
     resolution: {integrity: sha512-+N/Q9kV1+F+UeWYoSiULYo4xYSDQlTgb+ayMobAXPwMnLvop7oxKMo9OzIrX5x3eS4L4f2UHhc9axXwY8DpChg==}

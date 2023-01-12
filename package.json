@@ -10,8 +10,10 @@
     "scripts": {
         "lint": "eslint --ext js,ts,jsx,tsx .",
         "fmt": "prettier --write .",
-        "start": "ts-node src/index.ts",
-        "build": "tsc"
+        "build": "scripts/build.sh",
+        "watch": "scripts/watch.sh",
+        "start": "scripts/start.sh",
+        "dev": "scripts/dev.sh"
     },
     "keywords": [],
     "type": "module",
@@ -26,6 +28,7 @@
         "@types/source-map-support": "^0.5.6",
         "@typescript-eslint/eslint-plugin": "^5.45.1",
         "@typescript-eslint/parser": "^5.45.1",
+        "concurrently": "^7.6.0",
         "eslint": "^8.29.0",
         "nodemon": "^2.0.20",
         "nx": "15.4.8",

@@ -14,6 +14,7 @@ even just using plain templates.
 
 ## Features
 
+- [x] Free & Open-Source
 - [x] 100% written in TypeScript.
 - [x] A blazingly fast server framework based on Fastify. (See [@choo-js/coal](packages/coal/))
 - [x] Database support with TypeORM.
@@ -35,23 +36,24 @@ even just using plain templates.
 - [ ] Support for frontends with Svelte, React, Preact, Vue, and templating languages. (See [@choo-js/frontend](packages/frontend/))
 - [ ] Support for Rust-based backends (native node modules).
 - [ ] Support for Go-based backends (native node modules).
+- [x] Error handling.
 
-## Project Directories
+## Project Structure
 
-The directory structure of any Choo.js project is as follows:
+The structure of any Choo.js project is as follows:
 
-- api/ => The API and main code for the backend.
-- app/ => The frontend application code, if you choose to use a framework.
-- auth/ => The authentication code and config, allows you to use our in-house auth suite or bring your own.
-- config/ => The general app config. This allows you to configure your app as you choose.
-- controllers/ => The controllers to configure routes throughout your app.
-- layouts/ => The templates for layouts in the app.
-- migrations/ => SQL (or other) scripts to run for database migrations. Only run if the tables do not exist.
-- models/ => SQL (or other) models for entities and tables. Supports relations.
-- seeds/ => Database default data (seeds). Run after migrations.
-- scripts/ => Utility scripts you can run during development.
-- static/ => Static assets for your app to use.
-- views/ => Views to render in your app.
+- /api/ => The API and main code for the backend.
+- /app/ => The frontend application code, if you choose to use a framework.
+- /config/ => The general app config. This allows you to configure your app as you choose.
+- /controllers/ => The controllers to configure routes throughout your app.
+- /layouts/ => The templates for layouts in the app.
+- /migrations/ => SQL (or other) scripts to run for database migrations. Only run if the tables do not exist.
+- /models/ => SQL (or other) models for entities and tables. Supports relations.
+- /seeds/ => Database default data (seeds). Run after migrations.
+- /scripts/ => Utility scripts you can run during development.
+- /static/ => Static assets for your app to use.
+- /views/ => Views to render in your app.
+- /index.html => The base template to render from. Similar to Vite.
 
 ## Showcase
 
