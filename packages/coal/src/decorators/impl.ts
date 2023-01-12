@@ -1,1 +1,5 @@
-export class ControllerImpl {}
+import "reflect-metadata";
+
+export class ControllerImpl {
+    
+}

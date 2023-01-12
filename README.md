@@ -1,6 +1,6 @@
 # Choo.js
 
-A multilingual full-stack web application toolkit, inspired by Ruby on Rails.
+The blazingly fast multilingual and modular full-stack web application toolkit, inspired by Ruby on Rails.
 
 ## About
 
