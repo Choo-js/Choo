@@ -14,7 +14,9 @@
     "type": "module",
     "private": false,
     "dependencies": {
-        "@choo-js/logger": "^0.3.0",
+        "@choo-js/logger": "workspace:*",
+        "@fastify/middie": "^8.1.0",
+        "fastify": "^4.10.2",
         "reflect-metadata": "^0.1.13",
         "source-map-support": "^0.5.21"
     },

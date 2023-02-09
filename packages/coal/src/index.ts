@@ -1,4 +1,5 @@
 import "reflect-metadata";
+import { fastify, FastifyInstance } from "fastify";
 import sourceMap from "source-map-support";
 import {
     getAllMetadata,
@@ -15,7 +16,7 @@ import {
 } from "./decorators";
 import { Logger } from "@choo-js/logger";
 import { registerLoggerMiddleware } from "./middleware/logger";
-import { createServer, Server } from "http";
+import middie from "@fastify/middie";
 
 sourceMap.install();
 
@@ -31,7 +32,7 @@ export type RouteMethod = "get" | "post" | "put" | "patch" | "delete";
 export type RouteMethods = RouteMethod[];
 
 export class CoalInstance {
-    public http: Server;
+    public http: FastifyInstance & PromiseLike<FastifyInstance>;
 
     public static async new() {
         const instance = new CoalInstance();
@@ -42,7 +43,7 @@ export class CoalInstance {
     }
 
     private constructor() {
-        this.http = createServer();
+        this.http = fastify({ logger: false });
     }
 
     public async setup() {
