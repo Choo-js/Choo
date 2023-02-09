@@ -35,11 +35,7 @@
         "paths": {}
     },
 
-    "include": [
-        "**/scripts",
-        "**/src",
-        "**/tests"
-    ],
+    "include": ["**/scripts", "**/src", "**/tests"],
 
     "exclude": [
         "**/**/node_modules",

@@ -14,7 +14,7 @@ const run = async () => {
         port: 5432,
         username: "postgres",
         database: "choo_ticketing_dev",
-        password: "postgres"
+        password: "postgres",
     });
 
     instance.controller(new ExampleController());

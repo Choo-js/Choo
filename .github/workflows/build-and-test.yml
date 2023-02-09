@@ -2,44 +2,42 @@ name: Build & Test
 on: [push]
 
 jobs:
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
+    lint:
+        name: Lint
+        runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      actions: read
+        permissions:
+            contents: read
+            actions: read
 
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          lfs: true
-          submodules: true
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+                  lfs: true
+                  submodules: true
 
-      - name: Set SHAs
-        uses: nrwl/nx-set-shas@v3
-        with:
-          main-branch-name: master
-      
-      - name: Install PNPM
-        run: npm i -g pnpm
+            - name: Set SHAs
+              uses: nrwl/nx-set-shas@v3
 
-      - name: Install dependencies
-        run: pnpm i
+            - name: Install PNPM
+              run: npm i -g pnpm
 
-      - name: Lint
-        run: pnpm nx workspace-lint
+            - name: Install dependencies
+              run: pnpm i
 
-      - name: Format
-        run: pnpm nx format:check
+            - name: Lint
+              run: pnpm nx workspace-lint
 
-      - name: Lint all
-        run: pnpm nx affected --target=lint --parallel=3
+            - name: Format
+              run: pnpm nx format:check
 
-      - name: Lint all (CI)
-        run: pnpm nx affected --target=test --parallel=3 --configuration=ci
+            - name: Lint all
+              run: pnpm nx affected --target=lint --parallel=3
 
-      - name: Build
-        run: pnpm nx affected --target=build --parallel=3
+            - name: Lint all (CI)
+              run: pnpm nx affected --target=test --parallel=3 --configuration=ci
+
+            - name: Build
+              run: pnpm nx affected --target=build --parallel=3
