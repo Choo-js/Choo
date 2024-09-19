@@ -2,7 +2,7 @@
     "name": "@choo-js/ticketing",
     "version": "0.3.0",
     "description": "The Choo.js authentication system.",
-    "main": "dist/index.js",
+    "main": "src/index.ts",
     "private": false,
     "scripts": {
         "build": "tsc",
@@ -13,20 +13,20 @@
     "license": "MIT",
     "type": "module",
     "dependencies": {
-        "@choo-js/coal": "^0.3.0",
-        "@choo-js/core": "^0.3.0",
-        "aws-sdk": "^2.1269.0",
-        "fastify": "^4.10.2",
-        "fastify-plugin": "^4.4.0",
+        "@choo-js/coal": "workspace:*",
+        "@choo-js/core": "workspace:*",
+        "aws-sdk": "^2.1691.0",
+        "fastify": "^5.0.0",
+        "fastify-plugin": "^5.0.0",
         "mock-aws-s3": "^4.0.2",
-        "mongodb": "^3.7.3",
-        "mssql": "^7.3.5",
-        "mysql2": "^2.3.3",
-        "nock": "^13.2.9",
-        "pg": "^8.8.0",
-        "pg-native": "^3.0.1",
-        "reflect-metadata": "^0.1.13",
-        "sqlite3": "^5.1.2",
-        "typeorm": "^0.3.11"
+        "mongodb": "^6.9.0",
+        "mssql": "^11.0.1",
+        "mysql2": "^3.11.3",
+        "nock": "^13.5.5",
+        "pg": "^8.13.0",
+        "pg-native": "^3.2.0",
+        "reflect-metadata": "^0.2.2",
+        "sqlite3": "^5.1.7",
+        "typeorm": "^0.3.20"
     }
 }

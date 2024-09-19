@@ -2,7 +2,7 @@
     "name": "@choo-js/throttle",
     "version": "0.3.0",
     "description": "The Choo.js configuration system.",
-    "main": "dist/index.js",
+    "main": "src/index.ts",
     "private": false,
     "scripts": {
         "build": "tsc",
@@ -14,7 +14,7 @@
     "type": "module",
     "dependencies": {
         "@iarna/toml": "^2.2.5",
-        "reflect-metadata": "^0.1.13",
-        "yaml": "^2.1.3"
+        "reflect-metadata": "^0.2.2",
+        "yaml": "^2.5.1"
     }
 }

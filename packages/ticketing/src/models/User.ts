@@ -19,4 +19,11 @@ export class User {
 
     @Column()
     public email: string;
+
+    /**
+     * A JSON-serialized field for any extra data you may
+     * want to include.
+     */
+    @Column()
+    public extraData: string;
 }

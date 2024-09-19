@@ -1,10 +1,12 @@
-import { FastifyReply, FastifyRequest } from "fastify";
+import type { FastifyReply, FastifyRequest } from "fastify";
 import {
+    ContextParamIndexMetadataKey,
     MethodTypeMetadataKey,
     ReplyParamIndexMetadataKey,
     RequestParamIndexMetadataKey,
 } from "../decorators/constants";
 import { getAllMetadata } from "./index";
+import type { RouterContext } from "src/exports";
 
 export const getAllMiddlewares = (obj: Object) => {
     const keys = Reflect.ownKeys(Reflect.getPrototypeOf(obj)!);
@@ -19,11 +21,12 @@ export const getAllMiddlewares = (obj: Object) => {
     return routes;
 };
 
-export const executeMiddleware = (
+export const executeMiddleware = <T = unknown>(
     obj: any,
     name: string | symbol,
     req: FastifyRequest,
-    res: FastifyReply
+    res: FastifyReply,
+    ctx: RouterContext<T>,
 ) => {
     const meta = getAllMetadata(obj, name);
     const params = meta["design:paramtypes"].length || 0;
@@ -33,9 +36,11 @@ export const executeMiddleware = (
     const args = Array(params);
     const reqIndex = meta[RequestParamIndexMetadataKey] || -1;
     const resIndex = meta[ReplyParamIndexMetadataKey] || -1;
+    const contextIndex = meta[ContextParamIndexMetadataKey] || -1;
 
     if (reqIndex !== -1) args[reqIndex] = req;
     if (resIndex !== -1) args[resIndex] = res;
+    if (contextIndex !== -1) args[contextIndex] = ctx;
 
     return obj[name](...args);
 };

@@ -1,14 +1,14 @@
 import "reflect-metadata";
-import { ReplyParamIndexMetadataKey } from "./constants";
+import { ContextParamIndexMetadataKey } from "./constants";
 
-export const Reply = (): ParameterDecorator => {
+export const Context = (): ParameterDecorator => {
     return (
         target: Object,
         key: string | symbol | undefined,
         index: number
     ) => {
         Reflect.defineMetadata(
-            ReplyParamIndexMetadataKey,
+            ContextParamIndexMetadataKey,
             index,
             Reflect.getPrototypeOf(target)!,
             key!

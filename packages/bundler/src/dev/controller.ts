@@ -1,4 +1,4 @@
-import { FastifyRequest, FastifyReply } from "fastify";
+import type { FastifyRequest, FastifyReply } from "fastify";
 import { getAssetContents, serveAsset } from "./serveAsset";
 
 export class Controller {
@@ -7,7 +7,7 @@ export class Controller {
         res: FastifyReply,
         base: string
     ) {
-        const info = await serveAsset(req.routerPath, base);
+        const info = await serveAsset(req.url, base);
         const content = getAssetContents(info.path, info.content);
 
         res.code(info.code);

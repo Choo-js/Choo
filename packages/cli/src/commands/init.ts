@@ -4,8 +4,8 @@ import { simpleGit } from "simple-git";
 import { Command } from "commander";
 import * as path from "path";
 import * as fs from "fs";
-import { nicePromise } from "@choo-js/coupler/src/index.js";
-import { Logger } from "@choo-js/logger/src";
+import { nicePromise } from "@choo-js/coupler";
+import { Logger } from "@choo-js/logger";
 
 export interface TmpDirResult {
     path: string;

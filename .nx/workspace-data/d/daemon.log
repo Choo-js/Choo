@@ -1,0 +1,11 @@
+[NX Daemon Server] - 2024-09-19T20:10:51.227Z - Started listening on: /tmp/6aae888ede0210babd9c/d.sock
+[NX Daemon Server] - 2024-09-19T20:10:51.238Z - [WATCHER]: Subscribed to changes within: /mnt/vol/Choo (native)
+[NX Daemon Server] - 2024-09-19T20:10:51.244Z - Established a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-09-19T20:10:51.264Z - Established a connection. Number of open connections: 2
+[NX Daemon Server] - 2024-09-19T20:10:51.267Z - Closed a connection. Number of open connections: 1
+[NX Daemon Server] - 2024-09-19T20:10:51.269Z - [REQUEST]: Responding to the client. Shutdown initiated
+[NX Daemon Server] - 2024-09-19T20:10:51.270Z - Done responding to the client Shutdown initiated
+[NX Daemon Server] - 2024-09-19T20:10:51.271Z - Handled FORCE_SHUTDOWN. Handling time: 0. Response time: 2.
+[NX Daemon Server] - 2024-09-19T20:10:51.275Z - [WATCHER]: Stopping the watcher for /mnt/vol/Choo (sources)
+[NX Daemon Server] - 2024-09-19T20:10:51.280Z - Closed a connection. Number of open connections: 0
+[NX Daemon Server] - 2024-09-19T20:10:51.281Z - [WATCHER]: Stopping the watcher for /mnt/vol/Choo (outputs)

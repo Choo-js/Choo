@@ -1,5 +1,10 @@
 import "reflect-metadata";
-import { fastify, FastifyInstance } from "fastify";
+import {
+    fastify,
+    type FastifyInstance,
+    type FastifyReply,
+    type FastifyRequest,
+} from "fastify";
 import sourceMap from "source-map-support";
 import {
     getAllMetadata,
@@ -11,12 +16,13 @@ import {
 import {
     MiddlewareTypeKey,
     RoutePathMetadataKey,
-    MiddlewareEvent,
+    type MiddlewareEvent,
     ControllerImpl,
 } from "./decorators";
 import { Logger } from "@choo-js/logger";
 import { registerLoggerMiddleware } from "./middleware/logger";
 import middie from "@fastify/middie";
+import { defaultRouterCtx, type RouterContext } from "./exports";
 
 sourceMap.install();
 
@@ -31,19 +37,29 @@ export interface RouteMethodList {
 export type RouteMethod = "get" | "post" | "put" | "patch" | "delete";
 export type RouteMethods = RouteMethod[];
 
-export class CoalInstance {
-    public http: FastifyInstance & PromiseLike<FastifyInstance>;
+export type CoalFastify<T> = FastifyInstance &
+    PromiseLike<FastifyInstance> & { context: RouterContext<T> };
 
-    public static async new() {
-        const instance = new CoalInstance();
+export class CoalInstance<T = unknown> {
+    public http: CoalFastify<T>;
+
+    public static async create<T = unknown>(
+        ctx: RouterContext<T> = defaultRouterCtx as RouterContext<T>
+    ) {
+        const instance = new CoalInstance(ctx);
 
         await instance.setup();
 
         return instance;
     }
 
-    private constructor() {
-        this.http = fastify({ logger: false });
+    private constructor(
+        ctx: RouterContext<T> = defaultRouterCtx as RouterContext<T>
+    ) {
+        this.http = fastify({ logger: false }).decorate(
+            "context",
+            ctx
+        ) as CoalFastify<T>;
     }
 
     public async setup() {
@@ -74,7 +90,13 @@ export class CoalInstance {
                 );
 
                 this.http[method](path[method]!, (req, res) =>
-                    executeRoute(controller, route, req, res)
+                    executeRoute(
+                        controller,
+                        route,
+                        req,
+                        res,
+                        (req.server as CoalFastify<T>).context
+                    )
                 );
             }
         }
@@ -85,8 +107,16 @@ export class CoalInstance {
 
             Logger.info(`Registering middleware: ${middleware.toString()}`);
 
-            this.http.addHook(event as any, (req, res) =>
-                executeMiddleware(controller, middleware, req, res)
+            this.http.addHook(
+                event as any,
+                (req: FastifyRequest, res: FastifyReply) =>
+                    executeMiddleware(
+                        controller,
+                        middleware,
+                        req,
+                        res,
+                        (req.server as CoalFastify<T>).context
+                    )
             );
         }
     }

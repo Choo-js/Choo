@@ -2,7 +2,7 @@
     "name": "@choo-js/frontend",
     "version": "0.3.0",
     "description": "The Choo.js frontend system.",
-    "main": "dist/index.js",
+    "main": "src/index.ts",
     "private": false,
     "scripts": {
         "build": "tsc",
@@ -13,9 +13,9 @@
     "license": "MIT",
     "type": "module",
     "dependencies": {
-        "@choo-js/bundler": "^0.3.0",
-        "@choo-js/coal": "^0.3.0",
-        "@choo-js/logger": "^0.3.0",
-        "fastify": "^4.10.2"
+        "@choo-js/bundler": "workspace:*",
+        "@choo-js/coal": "workspace:*",
+        "@choo-js/logger": "workspace:*",
+        "fastify": "^5.0.0"
     }
 }

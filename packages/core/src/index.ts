@@ -1,17 +1,27 @@
-import { CoalInstance, ControllerImpl } from "@choo-js/coal";
-import { FastifyPluginCallback, FastifyPluginOptions } from "fastify";
+import {
+    CoalInstance,
+    ControllerImpl,
+    defaultRouterCtx,
+    type RouterContext,
+} from "@choo-js/coal";
+import type { FastifyPluginCallback, FastifyPluginOptions } from "fastify";
 
-export type TrainCar<T> = (locomotive: Locomotive, options: T) => Promise<void>;
+export type TrainCar<T, L = unknown> = (
+    locomotive: Locomotive<L>,
+    options: T
+) => Promise<void>;
 
-export class Locomotive {
-    public raw: CoalInstance;
+export class Locomotive<T = unknown> {
+    public raw: CoalInstance<T>;
 
-    private constructor(instance: CoalInstance) {
+    private constructor(instance: CoalInstance<T>) {
         this.raw = instance;
     }
 
-    public static async new() {
-        const coal = await CoalInstance.new();
+    public static async create<T = unknown>(
+        ctx: RouterContext<T> = defaultRouterCtx as RouterContext<T>
+    ) {
+        const coal = await CoalInstance.create(ctx);
         const instance = new Locomotive(coal);
 
         return instance;

@@ -8,5 +8,6 @@ export * from "./impl";
 export * from "./Request";
 export * from "./Reply";
 export * from "./Middleware";
+export * from "./Context";
 export * from "./constants";
 export * from "./type";
