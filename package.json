@@ -13,7 +13,8 @@
         "build": "scripts/build.sh",
         "watch": "scripts/watch.sh",
         "start": "scripts/start.sh",
-        "dev": "scripts/dev.sh"
+        "dev": "scripts/dev.sh",
+        "choo": "bun packages/cli/src/index.ts"
     },
     "keywords": [],
     "type": "module",
