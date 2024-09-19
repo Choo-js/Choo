@@ -13,24 +13,19 @@ export class Logger {
         )}`,
     };
 
-    public static info(message: string) {
-        const base = Logger.PREFIXES.info;
-        const output = `${base} ${message}`;
+    private static log(base: string, message: string) {
+        console.log(`${base} ${message}`);
+    }
 
-        console.log(output);
+    public static info(message: string) {
+        this.log(this.PREFIXES.info, message);
     }
 
     public static warn(message: string) {
-        const base = Logger.PREFIXES.warn;
-        const output = `${base} ${message}`;
-
-        console.log(output);
+        this.log(this.PREFIXES.warn, message);
     }
 
     public static error(message: string) {
-        const base = Logger.PREFIXES.error;
-        const output = `${base} ${message}`;
-
-        console.log(output);
+        this.log(this.PREFIXES.error, message);
     }
 }

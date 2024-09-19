@@ -1,25 +1,24 @@
 import { Locomotive } from "@choo-js/core";
 import { ticketing } from "@choo-js/ticketing";
 import { ExampleController } from "./example";
+import * as path from "path";
+
+const root: string = path.resolve(__dirname, "..");
 
 const run = async () => {
     console.log("Starting app...");
-    console.time("App started in");
+    console.time("App started");
 
-    const instance = await Locomotive.new();
+    const instance = await Locomotive.create();
 
     await instance.addCar(ticketing, {
-        type: "postgres",
-        host: "localhost",
-        port: 5432,
-        username: "postgres",
-        database: "choo_ticketing_dev",
-        password: "postgres",
+        type: "sqlite",
+        database: `${root}/db.sqlite`,
     });
 
     instance.controller(new ExampleController());
 
-    console.timeEnd("App started in");
+    console.timeEnd("App started");
 
     await instance.start();
 };

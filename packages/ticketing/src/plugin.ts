@@ -1,6 +1,6 @@
-import { FastifyPluginAsync } from "fastify";
+import type { FastifyPluginAsync } from "fastify";
 import fp from "fastify-plugin";
-import { DataSource, DataSourceOptions } from "typeorm";
+import { DataSource, type DataSourceOptions } from "typeorm";
 
 declare module "fastify" {
     export interface FastifyInstance {
@@ -35,7 +35,7 @@ const pluginAsync: FastifyPluginAsync<DBConfigOptions> = async (
 
     if (namespace) {
         if (!fastify.orm) {
-            fastify.decorate("orm", {});
+            fastify.decorate("orm", {} as any);
         }
 
         if (fastify.orm[namespace]) {
@@ -45,9 +45,9 @@ const pluginAsync: FastifyPluginAsync<DBConfigOptions> = async (
         } else {
             fastify.orm[namespace] = connection;
             await fastify.orm[namespace].initialize();
-            fastify.addHook("onClose", async (fastifyInstance, done) => {
-                await fastifyInstance.orm[namespace].destroy();
-                done();
+
+            fastify.addHook("onClose", async (inst) => {
+                await inst.orm[namespace].destroy();
             });
 
             return Promise.resolve();
@@ -56,17 +56,16 @@ const pluginAsync: FastifyPluginAsync<DBConfigOptions> = async (
 
     await connection.initialize();
 
-    fastify.decorate("orm", connection);
+    fastify.decorate("orm", connection as any);
 
-    fastify.addHook("onClose", async (fastifyInstance, done) => {
-        await fastifyInstance.orm.destroy();
-        done();
+    fastify.addHook("onClose", async (inst) => {
+        await inst.orm.destroy();
     });
 
     return Promise.resolve();
 };
 
 export default fp(pluginAsync, {
-    fastify: "4.x",
+    fastify: "5.x",
     name: "@fastify-typeorm",
 });

@@ -7,7 +7,7 @@ import {
     ControllerImpl,
     Delete,
 } from "@choo-js/coal";
-import { FastifyReply, FastifyRequest } from "fastify";
+import type { FastifyReply, FastifyRequest } from "fastify";
 import { hashPassword } from "./util";
 import { UserManager } from "./repositories";
 import { User } from "./models";

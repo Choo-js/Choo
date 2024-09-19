@@ -3,37 +3,28 @@ sourceMap.install();
 
 import "reflect-metadata";
 import FastifyTypeORM from "./plugin";
-import { buildDataSource, DataSourceType } from "./dataSource";
 import { Locomotive } from "@choo-js/core";
 import { TicketingController } from "./routing";
+import { DataSource } from "typeorm";
+import type { DataSourceOptions } from "typeorm/browser";
+import { User } from "./models";
 
 export * from "./models";
 export * from "./repositories";
 export * from "./util";
 
-export interface TicketingOptions {
-    type: DataSourceType;
-    host: string;
-    port: number;
-    username: string;
-    password?: string;
-    database: string;
-}
-
 export const ticketing = async (
     server: Locomotive,
-    options: TicketingOptions
+    options: DataSourceOptions
 ) => {
-    const { type, host, port, database, username, password } = options;
+    const entities = Array.isArray(options.entities)
+        ? options.entities
+        : Object.values(options.entities || {});
 
-    const source = buildDataSource(
-        type,
-        host,
-        port,
-        database,
-        username,
-        password
-    );
+    const source = new DataSource({
+        ...options,
+        entities: [User, ...(entities || [])],
+    });
 
     await server.plugin(FastifyTypeORM, { connection: source });
     server.controller(new TicketingController());
